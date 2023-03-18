@@ -51,6 +51,7 @@
                     break;   
 
                 case 'login':
+                    // session_regenerate_id(true);
                     
                     if((isset($_POST['login']))&&($_POST['login'])){
                         $name = $_POST['username'];

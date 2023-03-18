@@ -4,7 +4,7 @@
     function validated($name, $pass){
         $conn = connect();
         $stm = $conn->prepare("SELECT * FROM account WHERE username='$name' AND password='$pass'");
-        $stm->execute();
+        $stm->execute();       
         $result = $stm->setFetchMode(PDO::FETCH_ASSOC);
         $kq = $stm->fetchAll();
         return $kq;
